@@ -1,0 +1,4 @@
+Sum12 = Mean1 + Mean2
+Sum34 = Mean3 + Mean4
+Index12 = (Mean1 - Mean2)/(Mean1 + Mean2)
+Index34 = (Mean3 - Mean4)/(Mean3 + Mean4)
