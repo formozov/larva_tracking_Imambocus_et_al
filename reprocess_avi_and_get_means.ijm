@@ -12,13 +12,13 @@ function action(input, output_means,output_avi, filename) {
 		run("Convert to Mask", "method=Default background=Dark black");
 		saveAs("avi", output_avi + filename);
 		run("ROI Manager...");
-		makeRectangle(0, 0, 512, 1000);
+		makeRectangle(0, 0, 512, 2048);
 		roiManager("Add");
-		makeRectangle(512, 0, 512, 1000);
+		makeRectangle(512, 0, 512, 2048);
 		roiManager("Add");
-		makeRectangle(1024, 0, 512, 1000);
+		makeRectangle(1024, 0, 512, 2048);
 		roiManager("Add");
-		makeRectangle(1536, 0, 512, 1000);
+		makeRectangle(1536, 0, 512, 2048);
 		roiManager("Add");
 		run("Set Measurements...", "mean redirect=None decimal=3");
 		roiManager("Multi Measure");
