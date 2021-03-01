@@ -27,6 +27,8 @@ t2 = 47
 
 mypath = "./means/"
 
+max_intensity_for_plots = 3.0 
+
 from os import listdir
 from os.path import isfile, join
 onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
@@ -51,9 +53,13 @@ for f in onlyfiles:
     ax[0].set_xlabel("intensity1")
     ax[0].set_ylabel("intensity2")
     ax[0].plot(mean_mean1,mean_mean2,'.')
+    ax[0].set_ylim([0.0,max_intensity_for_plots])
+    ax[0].set_xlim([0.0,max_intensity_for_plots])
     ax[1].set_xlabel("intensity3")
     ax[1].set_ylabel("intensity4")
     ax[1].plot(mean_mean3,mean_mean4,'.')
+    ax[1].set_ylim([0.0,max_intensity_for_plots])
+    ax[1].set_xlim([0.0,max_intensity_for_plots])
 
     plt.tight_layout()
     plt.savefig("plots/" + f + "-left-right.png")
@@ -63,9 +69,11 @@ for f in onlyfiles:
     ax[0].set_xlabel("t")
     ax[0].set_ylabel("PI21")
     ax[0].plot( PI21)
+    ax[0].set_ylim([-1,1])
     ax[1].set_xlabel("t")
     ax[1].set_ylabel("PI43")
     ax[1].plot(PI43)
+    ax[1].set_ylim([-1,1])
     plt.tight_layout()
     plt.savefig("plots/" + f + "-PI21-PI43.png")
     
@@ -74,12 +82,19 @@ for f in onlyfiles:
     ax[0].set_xlabel("t")
     ax[0].set_ylabel("intensity1 + intensity2")
     ax[0].plot(summ21)
+    ax[0].set_ylim([0.0,max_intensity_for_plots])
     ax[1].set_xlabel("t")
     ax[1].set_ylabel("intensity3 + intensity4")
-    ax[1].plot(summ21)
+    ax[1].plot(summ43)
+    ax[1].set_ylim([0.0,max_intensity_for_plots])
     plt.tight_layout()
     plt.savefig("plots/" + f + "-sum12sum34.png")
-    
+    print("File: ", f)
+    epsilon = 0.000001
+    if (summ21.mean()>epsilon):
+        print("Intensity sum21 stability. Sigma/Mean: ", summ21.std()/summ21.mean())
+    if (summ43.mean()>epsilon):
+        print("Intensity sum43 stability. Sigma/Mean: ", summ43.std()/summ43.mean())   
 
     
     
