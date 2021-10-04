@@ -17,7 +17,7 @@ The script *plot_means_PI.py* quickly draws the resulting mean intensities on th
 time of performance indexes (PI's). As a control that the experiment and recording conditions remained constant, the sum left+right intensities also
 provided as it should stay the same.
 
-### Chemotaxis assay (reward zone analysis)
+### Chemotaxis assay (odor zone analysis)
 
 FIMTrack software was used to extract coordinates and kinematic
 parameters of the larvae in an automatic way. Jupyter-notebook *tracking script.ipynb* contains the analysis pipeline for FIMTrack extracted data to calculate
