@@ -23,7 +23,7 @@ FIMTrack software was used to extract coordinates and kinematic
 parameters of the larvae in an automatic way. Jupyter-notebook *tracking script.ipynb* contains the analysis pipeline for FIMTrack extracted data to calculate
 the difference in time spent by larvae in the zone near the odor.
 
-For any questions, open a new issue.
+For any questions, please open a new issue.
 
 
 
