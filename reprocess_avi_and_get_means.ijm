@@ -31,8 +31,8 @@ function action(input, output_means,output_avi, filename) {
 		run("Close All");
 		
 }
-
-path = "/media/andrey/My Passport/DROSOPHILA/Drosophila_Tracking_Analysis/light avoidance data/wt x tshgal80; uaskir/"
+// Modify this path
+path = "/User/DROSOPHILA/Drosophila_Tracking_Analysis/light avoidance data/wt x tshgal80; uaskir/"
 
 input = path + "avi/";
 
