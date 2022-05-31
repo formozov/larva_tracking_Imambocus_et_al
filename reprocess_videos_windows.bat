@@ -9,6 +9,14 @@
 :: Run script by typing
 :: reprocess_videos_windows.bat
 
+:: DEFINE THESE PARAMETERS and test the script (it is recommended to use a short video for the test)
+
+SET /A take_each_n_frame = 200 
+SET /A width = 1288 
+SET /A height = 600
+SET /A X = 0
+SET /A Y = 200
+
 ECHO "Analysis script"
 
 mkdir reduce
@@ -17,7 +25,7 @@ mkdir avi
 
 for %%f in (*.mp4) do (
 echo "%%f"
-ffmpeg -i "%%f" -vf "select=not(mod(n\,200))" -vsync vfr -q:v 2 reduce/"%%f"
-ffmpeg -i reduce/"%%f" -filter:v "crop=1288:600:0:200" -c:a copy crop/"%%f"
+ffmpeg -i "%%f" -vf "select=not(mod(n\,take_each_n_frame))" -vsync vfr -q:v 2 reduce/"%%f"
+ffmpeg -i reduce/"%%f" -filter:v "crop=width:height:X:Y" -c:a copy crop/"%%f"
 ffmpeg -i crop/"%%f" -pix_fmt nv12 -f avi -vcodec rawvideo avi/"%%f"
 )
