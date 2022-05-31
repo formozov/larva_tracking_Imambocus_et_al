@@ -1,4 +1,11 @@
-::test version
+:: Locate this script in the folder with *.mp4 files
+:: Run Command prompt in Windows
+:: Using Command prompt go to the folder with *.mp4 files by typing:
+:: cd /Users/..../path_to_files
+:: In case the files are located not on C: hard drive but on the other disk (for example Q:), type
+:: Q:
+:: to switch to this hard drive
+
 ECHO "TEST VERSION: DO NOT USE"
 
 mkdir reduce
