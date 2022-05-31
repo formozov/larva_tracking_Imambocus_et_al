@@ -8,13 +8,22 @@
 # To activate or deactivate a certain preprocessing step remove "#"-sign prior to ffmpeg command below 
 # Make sure that ffmpeg software is installed. It also should be executable from the command line, otherwise add prior to "ffmpeg" command the full path to where ffmpeg software is located.
 
+# DEFINE THESE PARAMETERS and test the script (it is recommended to use a short video for the test)
+
+declare -i take_each_n_frame = 200 
+declare -i width = 1288 
+declare -i height = 600
+declare -i X = 0
+declare -i Y = 200
+
+
 mkdir reduce
 mkdir crop
 mkdir avi
 
 for filename in ./*.mp4; do
-    ffmpeg -i $filename -vf "select=not(mod(n\,200))" -vsync vfr -q:v 2 reduce/$filename
-    ffmpeg -i reduce/$filename -filter:v "crop=2048:1000:0:550" -c:a copy crop/$filename
+    ffmpeg -i $filename -vf "select=not(mod(n\,$take_each_n_frame))" -vsync vfr -q:v 2 reduce/$filename
+    ffmpeg -i reduce/$filename -filter:v "crop=$width:$height:$X:$Y" -c:a copy crop/$filename
     ffmpeg -i reduce/$filename -pix_fmt nv12 -f avi -vcodec rawvideo avi/$filename.avi
 done
 
