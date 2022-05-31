@@ -2,6 +2,7 @@
 :: See https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/
 :: for more details
 :: Locate this script in the folder with *.mp4 files
+:: Run the script in the folder or, alternatively, run it though the Command prompt
 :: Run Command prompt in Windows
 :: Using Command prompt go to the folder with *.mp4 files by typing:
 :: cd C:\Users\....\path_to_files\
