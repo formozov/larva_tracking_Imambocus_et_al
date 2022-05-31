@@ -1,4 +1,6 @@
 :: Add the path to ffmpeg into the Path variable (see Windows enviroment variables)
+:: See https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/
+:: for more details
 :: Locate this script in the folder with *.mp4 files
 :: Run Command prompt in Windows
 :: Using Command prompt go to the folder with *.mp4 files by typing:
