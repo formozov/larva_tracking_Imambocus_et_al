@@ -1,4 +1,4 @@
-# larva_tracking_Imambocus_et_al
+# A two-choice assay for noxious light avoidance with intensity-based distribution analysis in Drosophila melanogaster larvae
 
 The repo contains (1) scripts to analyze Drosophila larvae distributions in two-choice assays (such as light avoidance), and 
 (2) the analysis of the distribution of the larva in the zone near the odor versus the rest of the arena in the chemotaxis assay.
