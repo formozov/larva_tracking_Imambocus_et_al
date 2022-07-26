@@ -32,7 +32,7 @@ function action(input, output_means,output_avi, filename) {
 		
 }
 // Modify this path
-path = "/User/DROSOPHILA/Drosophila_Tracking_Analysis/light avoidance data/wt x tshgal80; uaskir/"
+path = "C:/Users/Public/…/Folder_with_recordings/"
 
 input = path + "avi/";
 
