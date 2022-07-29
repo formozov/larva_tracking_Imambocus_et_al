@@ -11,10 +11,10 @@
 # DEFINE THESE PARAMETERS and test the script (it is recommended to use a short video for the test)
 
 take_each_n_frame=200 
-width=1288 
-height=600
+width=2048 
+height=1024
 X=0
-Y=200
+Y=300
 
 
 mkdir reduce
