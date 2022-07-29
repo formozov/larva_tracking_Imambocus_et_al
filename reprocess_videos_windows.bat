@@ -15,10 +15,10 @@
 :: DEFINE THESE PARAMETERS and test the script (it is recommended to use a short video for the test)
 
 SET /A take_each_n_frame = 200 
-SET /A width = 1288 
-SET /A height = 600
+SET /A width = 2048 
+SET /A height = 1024
 SET /A X = 0
-SET /A Y = 200
+SET /A Y = 300
 
 ECHO "Analysis script"
 
