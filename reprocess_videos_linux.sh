@@ -10,11 +10,11 @@
 
 # DEFINE THESE PARAMETERS and test the script (it is recommended to use a short video for the test)
 
-declare -i take_each_n_frame = 200 
-declare -i width = 1288 
-declare -i height = 600
-declare -i X = 0
-declare -i Y = 200
+take_each_n_frame=200 
+width=1288 
+height=600
+X=0
+Y=200
 
 
 mkdir reduce
