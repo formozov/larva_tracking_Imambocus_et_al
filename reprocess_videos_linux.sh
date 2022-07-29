@@ -24,7 +24,7 @@ mkdir avi
 for filename in ./*.mp4; do
     ffmpeg -i $filename -vf "select=not(mod(n\,$take_each_n_frame))" -vsync vfr -q:v 2 reduce/$filename
     ffmpeg -i reduce/$filename -filter:v "crop=$width:$height:$X:$Y" -c:a copy crop/$filename
-    ffmpeg -i reduce/$filename -pix_fmt nv12 -f avi -vcodec rawvideo avi/$filename.avi
+    ffmpeg -i crop/$filename -pix_fmt nv12 -f avi -vcodec rawvideo avi/$filename.avi
 done
 
 
