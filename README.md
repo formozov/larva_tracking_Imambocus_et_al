@@ -17,6 +17,8 @@ The script *plot_means_PI.py* quickly draws the resulting mean intensities on th
 time of performance indexes (PI's). As a control that the experiment and recording conditions remained constant, the sum left+right intensities also
 provided as it should stay the same.
 
+**Examples** of the video recordings and analysis results are availible [here](https://gin.g-node.org/formozov/two_choice_assay_larvae).
+
 ### Chemotaxis assay (odor zone analysis)
 
 FIMTrack software was used to extract coordinates and kinematic
